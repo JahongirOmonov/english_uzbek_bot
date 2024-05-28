@@ -1,7 +1,7 @@
 from asgiref.sync import sync_to_async
 from aiogram import Bot, types, Router, F
 from aiogram.filters import CommandStart, Command, StateFilter
-from TranslatorBot.keyboards import inline_keyboards, reply_keyboard
+from keyboards import inline_keyboards, reply_keyboard
 from aiogram.fsm.state import StatesGroup, State
 from aiogram.fsm.context import FSMContext
 from googletrans import Translator
