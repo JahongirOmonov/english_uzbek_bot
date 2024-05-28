@@ -31,7 +31,9 @@ async def start_command(message: types.Message, bot: Bot):
 
 
     message_to_user = """
-Assalomu alaykum, ushbu bot...
+Assalomu alaykum, ushbu bot hozir test jarayonida.
+Hozir faqatgina "Translator" bo'limi to'liq ishlayapti. 
+Qolgan bo'limlar ishlab chiqilish jarayonida...
 """
     await bot.send_message(chat_id=message.chat.id,
                            text=message_to_user,
@@ -64,7 +66,7 @@ async def something(callback: types.CallbackQuery, state: FSMContext):
     data = callback.data.split('_')[1]
 
     if data == 'translator':
-        await callback.message.answer(text="So'z kiriting: ", reply_markup=reply_keyboard.kb)
+        await callback.message.answer(text="Matn kiriting: ", reply_markup=reply_keyboard.kb)
         await state.set_state(TranslatorState.word)
 
     if data == "find":
